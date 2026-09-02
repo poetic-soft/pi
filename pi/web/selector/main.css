@@ -1,0 +1,109 @@
+:root {
+    --bg: #161410;
+    --panel: #221e18;
+    --line: #3a342c;
+    --text: #ece6d8;
+    --muted: #9a9080;
+    --led: #3ec2ff;
+    --ok: #7dba6a;
+    --bad: #d46a4a;
+}
+* { box-sizing: border-box; }
+html, body {
+    margin: 0;
+    min-height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font: 15px/1.4 "Segoe UI", system-ui, sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 0.9rem 1.4rem;
+    max-width: 460px;
+    margin: 0 auto;
+    min-height: 100dvh;
+}
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+}
+.back {
+    color: var(--led);
+    text-decoration: none;
+    font-size: 0.78rem;
+}
+.brand {
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    color: var(--muted);
+}
+.status {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--muted);
+    font-size: 0.78rem;
+}
+.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--bad);
+    flex: 0 0 auto;
+}
+.status.ok .dot { background: var(--ok); }
+.circles {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.7rem;
+}
+.circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 2px solid var(--line);
+    background: var(--panel);
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.72rem;
+    padding: 0.35rem;
+    line-height: 1.15;
+}
+.circle.active {
+    border-color: var(--led);
+    color: var(--text);
+    box-shadow: 0 0 0 3px rgba(62, 194, 255, 0.22);
+}
+.display {
+    width: 100%;
+    min-height: 4.2rem;
+    border: 1px solid var(--line);
+    background: #120f0c;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.45rem;
+    padding: 0.8rem;
+}
+.err {
+    margin: 0;
+    color: var(--bad);
+    font-size: 0.8rem;
+    text-align: center;
+    white-space: pre-wrap;
+}
+.err[hidden] { display: none; }

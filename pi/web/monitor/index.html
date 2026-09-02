@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Monitor — PowerMate</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header>
+    <a class="back" href="../">Inventos</a>
+    <div class="brand">Monitor</div>
+    <div class="status" id="status"><span class="dot"></span><span id="statusText">conectando…</span></div>
+  </header>
+  <div class="knob-wrap" id="wrap">
+    <div class="glow" id="glow"></div>
+    <div class="knob" id="knob">
+      <span class="knob-tick"></span>
+    </div>
+  </div>
+  <p id="device" class="device"></p>
+  <p id="err" class="err" hidden></p>
+  <div class="meters">
+    <div class="meter"><span>Brillo</span><strong id="brightness">—</strong></div>
+    <div class="meter"><span>Pulso</span><strong id="pulse">—</strong></div>
+    <div class="meter"><span>Ángulo</span><strong id="angleReadout">0°</strong></div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

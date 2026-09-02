@@ -1,0 +1,3 @@
+# Griffin PowerMate USB 077d:0410 — grupo input, lectura y LED
+SUBSYSTEM=="input", ATTRS{idVendor}=="077d", ATTRS{idProduct}=="0410", MODE="0660", GROUP="input", TAG+="uaccess"
+KERNEL=="hidraw*", ATTRS{idVendor}=="077d", ATTRS{idProduct}=="0410", MODE="0660", GROUP="input", TAG+="uaccess"
